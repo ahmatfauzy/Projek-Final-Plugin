@@ -4,7 +4,6 @@ function printTriangle(height) {
         console.log(' '.repeat(height - i) + '* '.repeat(i).trim());
     }
 }
-// Contoh penggunaan
 const height = 10;
 printTriangle(height);
 // untuk run 
