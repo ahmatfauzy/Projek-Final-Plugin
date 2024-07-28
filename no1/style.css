@@ -36,11 +36,10 @@ body {
 
 .tombol {
   display: none;
-  color: white;
-  font-size: 14pt;
 }
 
-.tombol:hover {
+.tombol img {
+  width: 30px;
   cursor: pointer;
 }
 
@@ -49,7 +48,7 @@ body {
   display: flex;
   list-style: none;
   padding: 0;
-  flex-wrap: wrap; /* Membuat menu bisa dibungkus ke baris berikutnya jika terlalu panjang */
+  flex-wrap: wrap;
 }
 
 .menu li {
@@ -69,10 +68,10 @@ body {
   }
 
   .menu.aktif {
-    display: inline-block;
+    display: block;
     position: absolute;
     top: 64px;
-    background: rgba(33, 33, 33, 0.9);
+    background: #212121;
     padding: 10px 20px;
     right: 0;
     left: 0;
@@ -80,11 +79,12 @@ body {
 
   .menu.aktif li a {
     padding: 10px;
-    display: inline-block !important;
+    display: block !important;
   }
 
   .tombol {
     display: block;
+    margin-right: 40px;
   }
 }
 
@@ -110,6 +110,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Warna hitam dengan opasitas 0.5 */
+  background: rgba(0, 0, 0, 0.6);
   z-index: 0;
 }

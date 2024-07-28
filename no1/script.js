@@ -1,5 +1,5 @@
 // deklarasi tombol dan menu
-const tombol = document.querySelector(".tombol");
+const tombol = document.getElementById("hamburger-menu");
 const menu = document.querySelector(".menu");
 
 // membuat event click
