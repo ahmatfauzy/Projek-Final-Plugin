@@ -1,0 +1,96 @@
+:root {
+  --primarycolor: #0a101e;
+  --secondarycolor: #fbc73e;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--primarycolor);
+  height: 1000px;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+  margin: 0;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 14pt;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tombol {
+  display: none;
+  color: white;
+  font-size: 14pt;
+}
+
+.tombol:hover {
+  cursor: pointer;
+}
+
+.menu {
+  margin: 0;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap; /* Membuat menu bisa dibungkus ke baris berikutnya jika terlalu panjang */
+}
+
+.menu li {
+  padding-right: 0px;
+}
+
+.menu li a {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .menu.aktif {
+    display: inline-block;
+    position: absolute;
+    top: 64px;
+    background: rgba(33, 33, 33, 0.9);
+    padding: 10px 20px;
+    right: 0;
+    left: 0;
+  }
+
+  .menu.aktif li a {
+    padding: 10px;
+    display: inline-block !important;
+  }
+
+  .tombol {
+    display: block;
+  }
+}
+
+#home {
+  background-image: url("img/landscape-nature-mountain-silhouette.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
