@@ -1,14 +1,14 @@
 "use strict";
-function calculateAverageAndGrade(webProgramming, computerProgramming, statistics, databaseSystems) {
+function calculateAverageAndGrade(PemrogramanWeb, PemrogramanKomputer, Statistika, SistemBasisData) {
     // Validasi
-    if (webProgramming === undefined ||
-        computerProgramming === undefined ||
-        statistics === undefined ||
-        databaseSystems === undefined) {
-        console.error("Semua nilai harus diisi.");
+    if (typeof PemrogramanWeb !== 'number' ||
+        typeof PemrogramanKomputer !== 'number' ||
+        typeof Statistika !== 'number' ||
+        typeof SistemBasisData !== 'number') {
+        console.log("NIlai tidak boleh kosong dan harus berupa angka.");
         return;
     }
-    const total = webProgramming + computerProgramming + statistics + databaseSystems;
+    const total = PemrogramanWeb + PemrogramanKomputer + Statistika + SistemBasisData;
     const average = total / 4;
     let grade;
     if (average >= 90 && average <= 100) {
@@ -34,10 +34,10 @@ function calculateAverageAndGrade(webProgramming, computerProgramming, statistic
     console.log(`Rata-rata: ${average}`);
     console.log(`Grade: ${grade}`);
 }
-const webProgramming = 85;
-const computerProgramming = 90;
-const statistics = 78;
-const databaseSystems = 88;
-calculateAverageAndGrade(webProgramming, computerProgramming, statistics, databaseSystems);
+const PemrogramanWeb = undefined;
+const PemrogramanKomputer = 90;
+const Statistika = 78;
+const SistemBasisData = 88;
+calculateAverageAndGrade(PemrogramanWeb, PemrogramanKomputer, Statistika, SistemBasisData);
 // untuk run
 // npx tsc && node nilai.js

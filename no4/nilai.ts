@@ -1,22 +1,21 @@
 function calculateAverageAndGrade(
-  webProgramming: number,
-  computerProgramming: number,
-  statistics: number,
-  databaseSystems: number
+  PemrogramanWeb: number,
+  PemrogramanKomputer: number,
+  Statistika: number,
+  SistemBasisData: number
 ): void {
   // Validasi
   if (
-    webProgramming === undefined ||
-    computerProgramming === undefined ||
-    statistics === undefined ||
-    databaseSystems === undefined
+    typeof PemrogramanWeb !== 'number' ||
+    typeof PemrogramanKomputer !== 'number' ||
+    typeof Statistika !== 'number' ||
+    typeof SistemBasisData !== 'number'
   ) {
-    console.error("Semua nilai harus diisi.");
+    console.log("NIlai tidak boleh kosong dan harus berupa angka.");
     return;
   }
 
-  const total =
-    webProgramming + computerProgramming + statistics + databaseSystems;
+  const total = PemrogramanWeb + PemrogramanKomputer + Statistika + SistemBasisData;
   const average = total / 4;
 
   let grade: string;
@@ -40,17 +39,18 @@ function calculateAverageAndGrade(
   console.log(`Grade: ${grade}`);
 }
 
-const webProgramming = 85;
-const computerProgramming = 90;
-const statistics = 78;
-const databaseSystems = 88;
+const PemrogramanWeb: any = undefined; 
+const PemrogramanKomputer: any = 90;
+const Statistika: any = 78;
+const SistemBasisData: any = 88;
 
 calculateAverageAndGrade(
-  webProgramming,
-  computerProgramming,
-  statistics,
-  databaseSystems
-)
+  PemrogramanWeb,
+  PemrogramanKomputer,
+  Statistika,
+  SistemBasisData
+);
+
 
 // untuk run
 // npx tsc && node nilai.js
