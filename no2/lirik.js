@@ -1,16 +1,6 @@
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
+"use strict";
 // Data lirik lagu
-var lirik_lagu = {
+let lirik_lagu = {
     status: true,
     data: {
         artist: "Avenged Sevenfold",
@@ -77,16 +67,16 @@ var lirik_lagu = {
     },
 };
 // a
-var newLirikLagu = __assign(__assign({}, lirik_lagu), { data: __assign(__assign({}, lirik_lagu.data), { artist: "Ahmat Fauzi", songTitle: "Software Engineer di Big Company" }) });
+let newLirikLagu = Object.assign(Object.assign({}, lirik_lagu), { data: Object.assign(Object.assign({}, lirik_lagu.data), { artist: "Ahmat Fauzi", songTitle: "Software Engineer di Big Company" }) });
 // b
-var targetLyric = "";
-for (var i = 0; i < lirik_lagu.data.songLyricsArr.length; i++) {
+let targetLyric = "";
+for (let i = 0; i < lirik_lagu.data.songLyricsArr.length; i++) {
     if (lirik_lagu.data.songLyricsArr[i].indexOf("For me to take what's mine, until the end of time?") !== -1) {
         targetLyric = lirik_lagu.data.songLyricsArr[i];
         break;
     }
 }
-console.log("Lirik lagu yang diperbarui: ", newLirikLagu);
+console.log("Data yang diperbarui: ", newLirikLagu);
 console.log("Lirik yang diambil:", targetLyric);
 // untuk run
 // npx tsc lirik.ts && node lirik.js
