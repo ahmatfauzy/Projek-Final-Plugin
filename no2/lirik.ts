@@ -67,17 +67,17 @@ let lirik_lagu = {
   },
 };
 
-// a. Mengubah data menggunakan spread operator
+// a
 let newLirikLagu = {
   ...lirik_lagu,
   data: {
     ...lirik_lagu.data,
     artist: "Ahmat Fauzi",
-    songTitle: "Ingin menjadi Developer Sukses",
+    songTitle: "Software Engineer di Big Company",
   },
 };
 
-// b. Mengambil data dari songLyricsArr
+// b
 let targetLyric = "";
 for (let i = 0; i < lirik_lagu.data.songLyricsArr.length; i++) {
   if (
@@ -90,7 +90,7 @@ for (let i = 0; i < lirik_lagu.data.songLyricsArr.length; i++) {
   }
 }
 
-console.log("Lirik Lagu Baru:", newLirikLagu);
+console.log("Data yang diperbarui: ", newLirikLagu);
 console.log("Lirik yang diambil:", targetLyric);
 
 // untuk run

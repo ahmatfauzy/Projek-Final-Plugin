@@ -1,10 +1,10 @@
 "use strict";
-function printTriangle(height) {
+function printRightAngledTriangle(height) {
     for (let i = 1; i <= height; i++) {
-        console.log(' '.repeat(height - i) + '* '.repeat(i).trim());
+        console.log('* '.repeat(i).trim());
     }
 }
-const height = 10;
-printTriangle(height);
-// untuk run 
+const height = 3;
+printRightAngledTriangle(height);
+// untuk run
 // npx tsc && node segitiga.js

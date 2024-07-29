@@ -76,9 +76,9 @@ var lirik_lagu = {
         ],
     },
 };
-// a. Mengubah data menggunakan spread operator
-var newLirikLagu = __assign(__assign({}, lirik_lagu), { data: __assign(__assign({}, lirik_lagu.data), { artist: "Ahmat Fauzi", songTitle: "Ingin menjadi Developer Sukses" }) });
-// b. Mengambil data dari songLyricsArr
+// a
+var newLirikLagu = __assign(__assign({}, lirik_lagu), { data: __assign(__assign({}, lirik_lagu.data), { artist: "Ahmat Fauzi", songTitle: "Software Engineer di Big Company" }) });
+// b
 var targetLyric = "";
 for (var i = 0; i < lirik_lagu.data.songLyricsArr.length; i++) {
     if (lirik_lagu.data.songLyricsArr[i].indexOf("For me to take what's mine, until the end of time?") !== -1) {
@@ -86,7 +86,7 @@ for (var i = 0; i < lirik_lagu.data.songLyricsArr.length; i++) {
         break;
     }
 }
-console.log("Lirik Lagu Baru:", newLirikLagu);
+console.log("Lirik lagu yang diperbarui: ", newLirikLagu);
 console.log("Lirik yang diambil:", targetLyric);
 // untuk run
 // npx tsc lirik.ts && node lirik.js
