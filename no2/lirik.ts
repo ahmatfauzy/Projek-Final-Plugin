@@ -1,4 +1,3 @@
-// Data lirik lagu
 let lirik_lagu = {
   status: true,
   data: {
