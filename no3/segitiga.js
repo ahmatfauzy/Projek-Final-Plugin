@@ -4,7 +4,7 @@ function segitiga(height) {
         console.log('* '.repeat(i));
     }
 }
-const height = 3;
+const height = 10;
 segitiga(height);
 console.log("Tinggi segitiga adalah: ", height);
 // untuk run
