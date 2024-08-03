@@ -1,6 +1,8 @@
 # Jawaban no.1 Tugas WebDev Plugin
 
 ## Tugas
+https://yasir-rizqi.gitbook.io/final-project-web-beginner/soal-1
+
 Membuat Web Profil sekreatif kalian,karena bakal kepakai untuk UTS semester 3 Mata Kuliah Pemrogaman Web 1
 
 Buatlah Web Profil
