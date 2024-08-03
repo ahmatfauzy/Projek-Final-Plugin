@@ -1,13 +1,13 @@
-#Jawaban no.1 Tugas WebDev Plugin
+# Jawaban no.1 Tugas WebDev Plugin
 
-##Tugas
+## Tugas
 Membuat Web Profil sekreatif kalian,karena bakal kepakai untuk UTS semester 3 Mata Kuliah Pemrogaman Web 1
 
 Buatlah Web Profil
 Kriteria : Gunakan element HTML Semantic
 Styling gunakan css native (disarankan menggunakan css eksternal)
 
-##Pengerjaan
+## Pengerjaan
 Saya membuat dengan HTML Semantic,CSS dan sedikit JS untuk bagian navbar. Saya menggunakan CSS Native dan ditulis secara eksternal di file style.css
 
 Saya menggunakan beberapa icons dari webiste FLOWBITE, dan mengimport font 'inter' dari google font yang saya import di css saya.
