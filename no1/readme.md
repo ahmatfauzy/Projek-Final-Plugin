@@ -18,6 +18,6 @@ Didalam web yang saya gunakan ada 3 bagian utama/section yang saya kasih id Home
 
 Saya menggunakan video sebagai background pada section id home dan saya atur dengan Cover agar terlihat full layar.
 
-Ada beberapa icons, tombol yang saya atur agar ada animasi(perubahan warna, ukuran) yang saya atur dengan :hover pada css saya.
+Ada beberapa icons, tombol yang saya atur agar ada animasi(perubahan warna, ukuran) yang saya atur dengan :hover pada css saya
 
 Web ini juga sudah responsive, karena sudah saya setting untuk tampilan mobile dengan media query.
