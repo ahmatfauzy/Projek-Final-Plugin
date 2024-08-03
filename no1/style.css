@@ -1,17 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
   --primarycolor: #0a101e;
   --secondarycolor: #fbc73e;
   --textprimary: #f8fffe;
   --textsecondary: #fbc73e;
-  --shadowtext: #131927;
+  --shadowtext: #1c2436;
 }
 
 body {
   margin: 0;
   background: var(--primarycolor);
-  height: 2000px;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -81,8 +80,7 @@ body {
   margin-top: 5px;
   left: 0;
   background: var(--secondarycolor);
-  transition: width 0.3s ease;
-  -webkit-transition: width 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .menu li a:hover::after {
@@ -115,6 +113,10 @@ body {
   .menu.aktif li a {
     padding: 10px;
     /* display: block !important; */
+  }
+
+  .menu li a:hover::after {
+    width: 100%;
   }
 
   .tombol {
@@ -199,15 +201,19 @@ body {
   fill: black;
 }
 
-#about {
+#about,
+#contact {
   padding-top: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 80px;
+  /* height: 100vh; */
 }
 
-.about-section {
+.about-section,
+.contact-container .contact-section {
   position: relative;
   text-align: center;
   font-family: Arial, sans-serif;
@@ -252,7 +258,6 @@ body {
   display: flex;
   border-radius: 8px;
   padding: 80px;
-
   max-width: 800px;
   align-items: center;
   margin: auto;
@@ -312,8 +317,8 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 0;
-    padding-top: 50px;
-    height: 100vh;
+    padding-top: 90px;
+    height: auto;
   }
 
   .profile-details {
@@ -322,7 +327,9 @@ body {
     text-align: center;
   }
 
-  .profile-details h1, .profile-details h2, .profile-details p {
+  .profile-details h1,
+  .profile-details h2,
+  .profile-details p {
     margin: 10px 0;
   }
 
@@ -333,5 +340,95 @@ body {
   .hubungi-saya {
     align-self: center;
     margin-top: 20px;
+  }
+}
+
+.contact-container {
+  background-color: var(--primarycolor);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 50%;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+}
+
+input,
+textarea {
+  background-color: var(--shadowtext);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: var(--textprimary);
+  font-size: 16px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--textprimary);
+  opacity: 0.7;
+}
+
+button {
+  background-color: var(--secondarycolor);
+  color: var(--primarycolor);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--textsecondary);
+}
+
+@media screen and (max-width: 768px) {
+  #contact {
+    padding: 0;
+    margin: 0;
+  }
+
+  .contact-container {
+    width: 100%;
+    max-width: 80%;
+  }
+}
+
+footer {
+  position: relative;
+  padding-top: 190px;
+}
+
+footer svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  color: var(--textprimary);
+}
+
+@media screen and (max-width: 768px) {
+.footer-content{
+  background-color: var(--shadowtext);
+}
+
+  footer svg {
+    height: 190px;
   }
 }
