@@ -1,4 +1,4 @@
-function calculateAverageAndGrade(
+function Matkul(
   PemrogramanWeb: number,
   PemrogramanKomputer: number,
   Statistika: number,
@@ -44,7 +44,7 @@ const PemrogramanKomputer: any = 90;
 const Statistika: any = 78;
 const SistemBasisData: any = 88;
 
-calculateAverageAndGrade(
+Matkul(
   PemrogramanWeb,
   PemrogramanKomputer,
   Statistika,
