@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 :root {
   --primarycolor: #0a101e;
   --secondarycolor: #fbc73e;
@@ -24,7 +26,7 @@ body {
   left: 0;
   background: transparent;
   margin: 0;
-  padding: 20px;
+  padding: 20px 50px;
   z-index: 1000;
 }
 
@@ -55,7 +57,7 @@ body {
   display: flex;
   list-style: none;
   padding: 0;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .menu li {
@@ -88,6 +90,10 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .navbar {
+    padding: 20px;
+  }
+
   .menu {
     display: none;
   }
@@ -96,7 +102,7 @@ body {
     display: block;
     position: absolute;
     top: 64px;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.309);
     padding: 10px 20px;
     right: 0;
     left: 0;
@@ -108,7 +114,7 @@ body {
 
   .menu.aktif li a {
     padding: 10px;
-    display: block !important;
+    /* display: block !important; */
   }
 
   .tombol {
@@ -161,33 +167,51 @@ body {
 }
 
 .icons {
+  display: flex;
   margin-top: 10px;
 }
 
 .icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 10px;
-}
-
-.icons img {
-  width: 40px;
-  height: 40px;
-  transition: all 0.4s ease-in-out;
-}
-
-.icons img:hover {
   width: 50px;
+  color: white;
   height: 50px;
+  border: 1px solid white;
+  border-radius: 8px;
+  transition: all 0.4s ease;
 }
 
-#about{
+.icons a:hover {
+  background: var(--secondarycolor);
+  transform: scale(1.1);
+  color: black;
+}
+
+.icons svg {
+  fill: white;
+  transition: all 0.4s ease;
+}
+
+.icons a:hover svg {
+  fill: black;
+}
+
+#about {
   padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .about-section {
   position: relative;
   text-align: center;
   font-family: Arial, sans-serif;
-  color: #ffd700;
+  color: var(--textsecondary);
   margin-top: 30px;
 }
 
@@ -212,7 +236,7 @@ body {
 .underline {
   width: 50px;
   height: 2px;
-  background-color: #ffd700;
+  background-color: var(--textsecondary);
   margin: 10px auto;
   z-index: 2;
   position: relative;
@@ -220,6 +244,94 @@ body {
 
 @media (min-width: 768px) {
   .text-bg {
-    font-size: 100px; /* Ukuran teks lebih kecil pada layar yang lebih besar */
+    font-size: 100px;
+  }
+}
+
+.biodata {
+  display: flex;
+  border-radius: 8px;
+  padding: 80px;
+
+  max-width: 800px;
+  align-items: center;
+  margin: auto;
+}
+
+.profile-picture img {
+  border-radius: 50%;
+  width: 250px;
+  height: auto;
+}
+
+.profile-details {
+  margin-left: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
+}
+
+.profile-details h1 {
+  margin: 0;
+  color: var(--textprimary);
+}
+
+.profile-details h2 {
+  margin: 10px 0;
+  color: var(--secondarycolor);
+}
+
+.profile-details p {
+  margin: 10px 0;
+  color: var(--textprimary);
+}
+
+.hubungi-saya {
+  background-color: transparent;
+  color: var(--textprimary);
+  border: 1px solid white;
+  border-color: #f8fffe;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.hubungi-saya:hover {
+  background-color: var(--textsecondary);
+  color: black;
+  border: 1px solid #fbc73e;
+}
+
+@media screen and (max-width: 768px) {
+  .biodata {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    padding-top: 50px;
+    height: 100vh;
+  }
+
+  .profile-details {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .profile-details h1, .profile-details h2, .profile-details p {
+    margin: 10px 0;
+  }
+
+  .profile-picture {
+    margin-bottom: 20px;
+  }
+
+  .hubungi-saya {
+    align-self: center;
+    margin-top: 20px;
   }
 }
